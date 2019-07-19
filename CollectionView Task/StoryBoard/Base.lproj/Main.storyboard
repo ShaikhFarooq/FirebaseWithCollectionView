@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wO0-z4-kcj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MOVIES-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionView_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0DC-4a-ZpF">
+                                <rect key="frame" x="0.0" y="127" width="375" height="540"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="ulR-YO-Sff">
+                                    <size key="itemSize" width="365" height="152"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCollectionViewCell" id="8Gp-3U-G5O" customClass="MovieCollectionViewCell" customModule="CollectionView_Task" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="365" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="365" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDP-zX-SwS">
+                                                    <rect key="frame" x="8" y="25" width="349" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★☆☆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRU-f3-bsA">
+                                                    <rect key="frame" x="8" y="116.5" width="349" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.94981259110000005" green="0.77789741749999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drama, Horror, Sci-Fi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEX-0y-ldS">
+                                                    <rect key="frame" x="8" y="68.5" width="349" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.16351777315139771" green="0.17647081613540649" blue="0.32996594905853271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NRU-f3-bsA" secondAttribute="bottom" constant="15" id="339-qq-und"/>
+                                            <constraint firstItem="qDP-zX-SwS" firstAttribute="top" secondItem="8Gp-3U-G5O" secondAttribute="top" constant="25" id="38Q-yk-usl"/>
+                                            <constraint firstItem="WEX-0y-ldS" firstAttribute="leading" secondItem="qDP-zX-SwS" secondAttribute="leading" id="Cvd-fZ-G48"/>
+                                            <constraint firstItem="WEX-0y-ldS" firstAttribute="top" secondItem="qDP-zX-SwS" secondAttribute="bottom" constant="20" id="IFd-Fs-3V0"/>
+                                            <constraint firstItem="qDP-zX-SwS" firstAttribute="leading" secondItem="8Gp-3U-G5O" secondAttribute="leading" constant="8" id="MUn-EG-kdI"/>
+                                            <constraint firstAttribute="trailing" secondItem="qDP-zX-SwS" secondAttribute="trailing" constant="8" id="b3s-rn-dK3"/>
+                                            <constraint firstItem="WEX-0y-ldS" firstAttribute="trailing" secondItem="qDP-zX-SwS" secondAttribute="trailing" id="g0T-nJ-wR7"/>
+                                            <constraint firstItem="qDP-zX-SwS" firstAttribute="centerX" secondItem="8Gp-3U-G5O" secondAttribute="centerX" id="jPG-pU-cpl"/>
+                                            <constraint firstItem="WEX-0y-ldS" firstAttribute="centerX" secondItem="8Gp-3U-G5O" secondAttribute="centerX" id="oTt-Qj-JWn"/>
+                                            <constraint firstItem="NRU-f3-bsA" firstAttribute="leading" secondItem="qDP-zX-SwS" secondAttribute="leading" id="tih-am-z6U"/>
+                                            <constraint firstItem="NRU-f3-bsA" firstAttribute="trailing" secondItem="qDP-zX-SwS" secondAttribute="trailing" id="wFu-AO-8fY"/>
+                                            <constraint firstItem="NRU-f3-bsA" firstAttribute="centerX" secondItem="8Gp-3U-G5O" secondAttribute="centerX" id="yeM-Ru-ZlI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="qDP-zX-SwS" id="Ofo-jR-BEt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OeU-E7-fPS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vmx-Zp-2bE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0DC-4a-ZpF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0WH-wd-QBK"/>
+                            <constraint firstItem="0DC-4a-ZpF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NpH-OG-PaQ"/>
+                            <constraint firstItem="0DC-4a-ZpF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Y2r-aX-PyI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0DC-4a-ZpF" secondAttribute="bottom" id="nk4-Hh-k1S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MOVIES" largeTitleDisplayMode="always" id="JAK-sI-S0m"/>
+                    <connections>
+                        <outlet property="mCollectionView" destination="0DC-4a-ZpF" id="6se-ge-Kk6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TS5-Z2-XZP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wO0-z4-kcj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="thL-oC-VST">
+                        <rect key="frame" x="0.0" y="20" width="375" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.023529411760000001" green="0.039215686270000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UZc-nk-KcD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yev-DD-5Us" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
