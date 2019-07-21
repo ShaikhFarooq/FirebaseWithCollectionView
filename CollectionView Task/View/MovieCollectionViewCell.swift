@@ -24,7 +24,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
         "★★★★☆",
         "★★★★★"
     ]
-
+ 
      // MARK: - Life Cycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
