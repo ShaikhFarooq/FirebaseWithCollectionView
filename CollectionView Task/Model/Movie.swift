@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct Movie {
-    var movieName = ""
-    var genre = ""
+struct Movie: Codable {
+    var title = ""
+    var year = ""
     var rating = 0
+    var genre = ""
 }
