@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieViewController.swift
 //  CollectionView Task
 //
 //  Created by Admin on 7/16/19.
@@ -10,11 +10,14 @@ import UIKit
 
 class MovieViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mCollectionView: UICollectionView!
     
+    // MARK: - Properties
     var movieList = [Movie]()
     
+    // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchMovieData()
@@ -22,6 +25,7 @@ class MovieViewController: UIViewController {
         mCollectionView?.collectionViewLayout = InvertedCollectionViewFlowLayout()
     }
     
+    // MARK: - Fetch Data From Firebase Database
     func fetchMovieData(){
         showLoadingIndicator()
         Network.sharedInstance.fetchData("movies"){(result, error) in
@@ -33,10 +37,10 @@ class MovieViewController: UIViewController {
                 print("error: \(error.localizedDescription)")
                 showAlert(targetVC: self, title: "", message: error.localizedDescription)
             }
-          
+            
             if self.movieList.count > 0{
                 print(self.movieList)
-               self.stopLoadingIndicator()
+                self.stopLoadingIndicator()
                 self.reloadData()
             }else{
                 self.stopLoadingIndicator()
@@ -45,6 +49,7 @@ class MovieViewController: UIViewController {
         }
     }
     
+    // MARK: - Helper Methods
     private func showLoadingIndicator(){
         self.loadingIndicator.isHidden = false
         self.loadingIndicator.startAnimating()
@@ -62,6 +67,7 @@ class MovieViewController: UIViewController {
     }
 }
 
+// MARK: - Collectionview DataSource Methods
 extension MovieViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,8 +77,6 @@ extension MovieViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let movieCell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
         movieCell.layer.cornerRadius = 10
-        movieCell.setNeedsLayout()
-        movieCell.layoutIfNeeded()
         
         if movieList.count > 0 {
             movieCell.setData(movie: movieList[indexPath.row])
@@ -81,8 +85,8 @@ extension MovieViewController : UICollectionViewDataSource {
     }
 }
 
+// MARK: - Collectionview Flow Layout Methods
 extension MovieViewController : UICollectionViewDelegateFlowLayout {
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let approximateWidthOfContent = view.frame.width/2 - 20
         let size = CGSize(width: approximateWidthOfContent, height: 150)
