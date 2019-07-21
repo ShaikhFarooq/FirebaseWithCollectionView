@@ -11,14 +11,28 @@ import UIKit
 class MovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLbl: UILabel!
-    
+    @IBOutlet weak var genreLbl: UILabel!
+    @IBOutlet weak var ratingLbl: UILabel!
+   
+    let ratingsDisplay = [
+        "☆☆☆☆☆",
+        "★☆☆☆☆",
+        "★★☆☆☆",
+        "★★★☆☆",
+        "★★★★☆",
+        "★★★★★"
+    ]
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
     }
     
-    func setData(movieName: String){
-        nameLbl.text = movieName
+    func setData(movie: Movie){
+        nameLbl.text = movie.title + "(" + movie.year + ")"
+        genreLbl.text = movie.genre
+        ratingLbl.text = ratingsDisplay[movie.rating]
     }
     
 }
