@@ -8,5 +8,9 @@ target 'CollectionView Task' do
   # Pods for CollectionView Task
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'CodableFirebase'
 
 end

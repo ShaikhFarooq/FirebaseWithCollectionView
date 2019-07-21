@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		845402D622E23A7B00973142 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845402D522E23A7B00973142 /* Movie.swift */; };
+		845402DA22E24B9600973142 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 845402D922E24B9500973142 /* GoogleService-Info.plist */; };
+		845402DE22E44A5500973142 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845402DD22E44A5500973142 /* Network.swift */; };
+		845402E122E46A9800973142 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845402E022E46A9800973142 /* Constants.swift */; };
+		845402E322E46AB300973142 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845402E222E46AB300973142 /* Utilities.swift */; };
+		845402E522E46EC200973142 /* InvertedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845402E422E46EC200973142 /* InvertedCollectionViewFlowLayout.swift */; };
+		845402E722E474AF00973142 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845402E622E474AF00973142 /* Extensions.swift */; };
 		8462CD8A22DE1D540052BCBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462CD8922DE1D540052BCBE /* AppDelegate.swift */; };
-		8462CD8C22DE1D540052BCBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462CD8B22DE1D540052BCBE /* ViewController.swift */; };
+		8462CD8C22DE1D540052BCBE /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462CD8B22DE1D540052BCBE /* MovieViewController.swift */; };
 		8462CD8F22DE1D540052BCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8462CD8D22DE1D540052BCBE /* Main.storyboard */; };
 		8462CD9122DE1D540052BCBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8462CD9022DE1D540052BCBE /* Assets.xcassets */; };
 		8462CD9422DE1D540052BCBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8462CD9222DE1D540052BCBE /* LaunchScreen.storyboard */; };
@@ -20,9 +26,15 @@
 /* Begin PBXFileReference section */
 		58AB93374D253CDA899EE38E /* Pods_CollectionView_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollectionView_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		845402D522E23A7B00973142 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		845402D922E24B9500973142 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		845402DD22E44A5500973142 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		845402E022E46A9800973142 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		845402E222E46AB300973142 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		845402E422E46EC200973142 /* InvertedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		845402E622E474AF00973142 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8462CD8622DE1D540052BCBE /* CollectionView Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CollectionView Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8462CD8922DE1D540052BCBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8462CD8B22DE1D540052BCBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8462CD8B22DE1D540052BCBE /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		8462CD8E22DE1D540052BCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8462CD9022DE1D540052BCBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8462CD9322DE1D540052BCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +75,7 @@
 		845402D022E239C100973142 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8462CD8B22DE1D540052BCBE /* ViewController.swift */,
+				8462CD8B22DE1D540052BCBE /* MovieViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -93,6 +105,33 @@
 			path = StoryBoard;
 			sourceTree = "<group>";
 		};
+		845402DB22E24BDD00973142 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				845402D922E24B9500973142 /* GoogleService-Info.plist */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		845402DC22E44A4300973142 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				845402DD22E44A5500973142 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		845402DF22E46A8600973142 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				845402E022E46A9800973142 /* Constants.swift */,
+				845402E222E46AB300973142 /* Utilities.swift */,
+				845402E422E46EC200973142 /* InvertedCollectionViewFlowLayout.swift */,
+				845402E622E474AF00973142 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		8462CD7D22DE1D540052BCBE = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +153,9 @@
 		8462CD8822DE1D540052BCBE /* CollectionView Task */ = {
 			isa = PBXGroup;
 			children = (
+				845402DF22E46A8600973142 /* Helpers */,
+				845402DC22E44A4300973142 /* Network */,
+				845402DB22E24BDD00973142 /* Resourse */,
 				845402D422E23A4E00973142 /* StoryBoard */,
 				845402D222E23A0300973142 /* AppDelegate */,
 				845402D122E239CF00973142 /* View */,
@@ -195,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8462CD9422DE1D540052BCBE /* LaunchScreen.storyboard in Resources */,
+				845402DA22E24B9600973142 /* GoogleService-Info.plist in Resources */,
 				8462CD9122DE1D540052BCBE /* Assets.xcassets in Resources */,
 				8462CD8F22DE1D540052BCBE /* Main.storyboard in Resources */,
 			);
@@ -212,14 +255,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CollectionView Task/Pods-CollectionView Task-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,10 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8462CD8C22DE1D540052BCBE /* ViewController.swift in Sources */,
+				845402DE22E44A5500973142 /* Network.swift in Sources */,
+				845402E722E474AF00973142 /* Extensions.swift in Sources */,
+				8462CD8C22DE1D540052BCBE /* MovieViewController.swift in Sources */,
+				845402E322E46AB300973142 /* Utilities.swift in Sources */,
 				8462CD8A22DE1D540052BCBE /* AppDelegate.swift in Sources */,
 				845402D622E23A7B00973142 /* Movie.swift in Sources */,
 				8462CD9E22DE1FC50052BCBE /* MovieCollectionViewCell.swift in Sources */,
+				845402E122E46A9800973142 /* Constants.swift in Sources */,
+				845402E522E46EC200973142 /* InvertedCollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
